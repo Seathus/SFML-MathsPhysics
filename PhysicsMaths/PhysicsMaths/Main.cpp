@@ -1,32 +1,12 @@
 #include <SFML\Graphics.hpp>
+#include "Line.h"
+#include "Renderer.h"
 
 int main() 
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Title");
+	Renderer::SetupWindow();
 
-	sf::Event event;
-
-	sf::CircleShape circle(65, 360);
-
-	while (window.isOpen())
-	{
-		while (window.pollEvent(event))
-		{
-			if (event.type == sf::Event::Closed)
-			{
-				window.close();
-			}
-
-			// Clear screen
-			window.clear();
-
-			// Draw to screen
-			window.draw(circle);
-
-			// Update the window
-			window.display();
-		}
-	}
+	Renderer::Render();
 
 	return 0;
 }

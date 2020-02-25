@@ -2,30 +2,34 @@
 
 void Renderer::SetupWindow() 
 {
-	sf::RenderWindow window(sf::VideoMode(800, 600), "Title");
+	window = new sf::RenderWindow(sf::VideoMode(800, 600), "Title");
+	GameObjectManager* gameObjectManager = new GameObjectManager();
+	Line* line = new Line();
+	gameObjectManager->AddGameObjectToManager(line);
+
 }
 
 void Renderer::ClearScreen()
 {
 	// Clear screen
-	window.clear();
+	window->clear();
 }
 
 void Renderer::UpdateWindow()
 {
 	// Update the window
-	window.display();
+	window->display();
 }
 
 void Renderer::Render() 
 {
-	while (window.isOpen())
+	while (window->isOpen())
 	{
-		while (window.pollEvent(event))
+		while (window->pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 			{
-				window.close();
+				window->close();
 			}
 
 			ClearScreen();
@@ -35,6 +39,5 @@ void Renderer::Render()
 			UpdateWindow();
 		}
 	}
-	
 }
 

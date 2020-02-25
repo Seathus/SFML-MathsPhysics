@@ -2,6 +2,7 @@
 #include <SFML\Graphics.hpp>
 #include "Tick.h"
 #include "GameObjectManager.h"
+#include "Line.h"
 
 
 class Renderer
@@ -9,13 +10,13 @@ class Renderer
 
 private:
 	Tick _tick;
-	static sf::Event event;
+	sf::Event event;
 public:
-	static sf::RenderWindow window;
+	sf::RenderWindow* window;
 
-	static void SetupWindow();
-	static void Render();
-	static void ClearScreen();
-	static void UpdateWindow();
+	void SetupWindow();
+	void Render();
+	void ClearScreen();
+	void UpdateWindow();
 };
 

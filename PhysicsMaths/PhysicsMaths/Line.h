@@ -1,14 +1,13 @@
 #pragma once
 #include <SFML\Graphics.hpp>
 #include <iostream>
-#include <array>
 #include <vector>
 #include "Renderer.h"
 #include "GameObject.h"
 
 using namespace std;
 
-class Line : GameObject
+class Line : public GameObject
 {
 private:
 	
@@ -20,6 +19,6 @@ public:
 	Line();
 	Line(const int vertexCount);
 	void AddVertexToLine(sf::Vertex* vertex);
-	void Draw();
+	void Draw() override;
 	~Line();
 };

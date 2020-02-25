@@ -14,8 +14,8 @@ public:
 	
 	GameObjectManager();
 	~GameObjectManager();
-	static void AddGameObjectToManager(GameObject* gameObject);
-	static void RemoveGameObjectFromManager(GameObject* gameObject);
+	void AddGameObjectToManager(GameObject* gameObject);
+	void RemoveGameObjectFromManager(GameObject* gameObject);
 	static void DrawGameObjectsInList();
 	
 };

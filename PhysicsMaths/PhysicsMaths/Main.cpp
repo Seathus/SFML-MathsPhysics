@@ -4,9 +4,10 @@
 
 int main() 
 {
-	Renderer::SetupWindow();
+	Renderer renderer;
 
-	Renderer::Render();
+	renderer.SetupWindow();
+	renderer.Render();
 
 	return 0;
 }

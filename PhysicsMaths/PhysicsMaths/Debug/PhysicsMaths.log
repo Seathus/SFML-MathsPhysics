@@ -1,9 +1,4 @@
-﻿  GameObjectManager.cpp
-g:\personalprojects\sfml-mathsphysics\physicsmaths\physicsmaths\gameobjectmanager.cpp(15): warning C4018: '<': signed/unsigned mismatch
-  Line.cpp
-  Main.cpp
-  Renderer.cpp
+﻿  SFML.cpp
+  SFMLRenderComponent.cpp
   Generating Code...
-GameObjectManager.obj : error LNK2001: unresolved external symbol "private: static class std::vector<class GameObject *,class std::allocator<class GameObject *> > GameObjectManager::_gameObjectList" (?_gameObjectList@GameObjectManager@@0V?$vector@PAVGameObject@@V?$allocator@PAVGameObject@@@std@@@std@@A)
-Renderer.obj : error LNK2019: unresolved external symbol "public: __thiscall GameObjectManager::GameObjectManager(void)" (??0GameObjectManager@@QAE@XZ) referenced in function "public: void __thiscall Renderer::SetupWindow(void)" (?SetupWindow@Renderer@@QAEXXZ)
-G:\personalprojects\SFML-MathsPhysics\PhysicsMaths\Debug\PhysicsMaths.exe : fatal error LNK1120: 2 unresolved externals
+  PhysicsMaths.vcxproj -> G:\personalprojects\SFML-MathsPhysics\PhysicsMaths\Debug\PhysicsMaths.exe

@@ -1,9 +1,18 @@
 #pragma once
+#include "RenderComponent.h"
+#include <vector>
 class GameObject
 {
 private:
+	
 
 public:
-	virtual void Draw();
+	std::vector<Component*> components;
+
+	GameObject();
+	~GameObject();
+	void RegisterComponent(Component& component);
+	void RemoveComponent(Component& component);
+	void FlushComponents();
 };
 

@@ -1,13 +1,13 @@
-#include <SFML\Graphics.hpp>
-#include "Line.h"
-#include "Renderer.h"
+#include "SFML.h"
+
 
 int main() 
 {
-	Renderer renderer;
+	SFML sfml;
 
-	renderer.SetupWindow();
-	renderer.Render();
+	
+	
+	sfml.Render();
 
 	return 0;
 }

@@ -2,7 +2,6 @@
 #include <SFML\Graphics.hpp>
 #include <iostream>
 #include <vector>
-#include "Renderer.h"
 #include "GameObject.h"
 
 using namespace std;
@@ -17,8 +16,9 @@ private:
 public:
 
 	Line();
+	~Line();
 	Line(const int vertexCount);
 	void AddVertexToLine(sf::Vertex* vertex);
 	void Draw() override;
-	~Line();
+	
 };
